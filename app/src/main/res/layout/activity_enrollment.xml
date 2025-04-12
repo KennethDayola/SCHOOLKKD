@@ -1,0 +1,80 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title: Prospectus -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prospectus"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+
+        <!-- Prospectus Table -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/prospectusRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/card_background"
+            android:elevation="4dp"
+            android:padding="8dp"/>
+
+        <!-- Title: Chosen Subjects -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chosen Subjects"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp" />
+
+        <!-- Enrollment Table -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:fillViewport="true">
+
+            <TableLayout
+                android:id="@+id/enrollmentTable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_background"
+                android:elevation="4dp"
+                android:padding="8dp"
+                android:stretchColumns="0,1,2,3,4,5,6">
+
+                <TableRow>
+                    <TextView android:text="EDP Code" android:textStyle="bold" android:gravity="center" android:padding="8dp"/>
+                    <TextView android:text="Subject Code" android:textStyle="bold" android:gravity="center" android:padding="8dp"/>
+                    <TextView android:text="Start Time" android:textStyle="bold" android:gravity="center" android:padding="8dp"/>
+                    <TextView android:text="End Time" android:textStyle="bold" android:gravity="center" android:padding="8dp"/>
+                    <TextView android:text="Days" android:textStyle="bold" android:gravity="center" android:padding="8dp"/>
+                    <TextView android:text="Room" android:textStyle="bold" android:gravity="center" android:padding="8dp"/>
+                    <TextView android:text="Units" android:textStyle="bold" android:gravity="center" android:padding="8dp"/>
+                </TableRow>
+
+            </TableLayout>
+        </ScrollView>
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/saveEnrollmentButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_button"
+            android:text="SAVE"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"/>
+    </LinearLayout>
+</ScrollView>

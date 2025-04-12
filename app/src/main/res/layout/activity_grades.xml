@@ -1,0 +1,100 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- Profile Image -->
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/grade"/>
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Grades"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="#333"/>
+
+    <!-- Scrollable Grades Table -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:elevation="4dp"
+            android:padding="8dp"
+            android:stretchColumns="1,2,3,4">
+
+            <!-- Table Header -->
+            <TableRow>
+                <TextView android:text="Subject Code" android:textStyle="bold" android:gravity="center" android:padding="8dp"/>
+                <TextView android:text="Description" android:textStyle="bold" android:gravity="center" android:padding="8dp"/>
+                <TextView android:text="Units" android:textStyle="bold" android:gravity="center" android:padding="8dp"/>
+                <TextView android:text="Final Grade" android:textStyle="bold" android:gravity="center" android:padding="8dp"/>
+            </TableRow>
+
+            <!-- Sample Grades Data -->
+            <TableRow>
+                <TextView android:text="CS101" android:gravity="center" android:padding="8dp"/>
+                <TextView android:text="Intro to Programming" android:gravity="center" android:padding="8dp"/>
+                <TextView android:text="3" android:gravity="center" android:padding="8dp"/>
+                <TextView android:text="89.5" android:gravity="center" android:padding="8dp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView android:text="MA201" android:gravity="center" android:padding="8dp"/>
+                <TextView android:text="Calculus I" android:gravity="center" android:padding="8dp"/>
+                <TextView android:text="4" android:gravity="center" android:padding="8dp"/>
+                <TextView android:text="92.0" android:gravity="center" android:padding="8dp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView android:text="PH101" android:gravity="center" android:padding="8dp"/>
+                <TextView android:text="Physics I" android:gravity="center" android:padding="8dp"/>
+                <TextView android:text="3" android:gravity="center" android:padding="8dp"/>
+                <TextView android:text="85.3" android:gravity="center" android:padding="8dp"/>
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Semester"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
+
+    <Spinner
+        android:id="@+id/semesterSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_background"
+        android:padding="10dp"/>
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_button"
+        android:text="BACK"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"/>
+</LinearLayout>

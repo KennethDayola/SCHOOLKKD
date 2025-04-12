@@ -1,0 +1,114 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Assessment"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textColor="#333"/>
+
+    <!-- Scrollable Fees Table -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:elevation="4dp"
+            android:padding="8dp"
+            android:stretchColumns="1,2">
+
+            <!-- Table Header -->
+            <TableRow>
+                <TextView android:text="Fee Type" android:textStyle="bold" android:gravity="center" android:padding="8dp"/>
+                <TextView android:text="Amount (₱)" android:textStyle="bold" android:gravity="center" android:padding="8dp"/>
+            </TableRow>
+
+            <!-- Sample Fees Data -->
+            <TableRow>
+                <TextView android:text="Tuition Fee" android:gravity="center" android:padding="8dp"/>
+                <TextView android:text="₱25,000" android:gravity="center" android:padding="8dp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView android:text="Miscellaneous Fee" android:gravity="center" android:padding="8dp"/>
+                <TextView android:text="₱5,000" android:gravity="center" android:padding="8dp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView android:text="Laboratory Fee" android:gravity="center" android:padding="8dp"/>
+                <TextView android:text="₱3,000" android:gravity="center" android:padding="8dp"/>
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+    <!-- Total Amount -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:padding="12dp"
+        android:background="@drawable/card_background"
+        android:elevation="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Amount: "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textColor="#333"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/totalAmount"
+            android:text="₱33,000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FF5722"/>
+    </LinearLayout>
+
+    <!-- Payment Option -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Payment Method"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
+
+    <Spinner
+        android:id="@+id/paymentSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_background"
+        android:padding="10dp"/>
+
+    <!-- Pay Now Button -->
+    <Button
+        android:id="@+id/payNowButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_button"
+        android:text="PRINT"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"/>
+</LinearLayout>
